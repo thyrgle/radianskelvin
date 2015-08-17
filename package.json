@@ -1,0 +1,24 @@
+{
+  "name": "radianskelvin",
+  "version": "1.0.0",
+  "description": "Best weather app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thyrgle/radianskelvin.git"
+  },
+  "keywords": [
+    "radians",
+    "kelvin",
+    "weather"
+  ],
+  "author": "Christopher Sumnicht",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thyrgle/radianskelvin/issues"
+  },
+  "homepage": "https://github.com/thyrgle/radianskelvin#readme"
+}
