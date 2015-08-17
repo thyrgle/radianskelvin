@@ -20,5 +20,13 @@
   "bugs": {
     "url": "https://github.com/thyrgle/radianskelvin/issues"
   },
-  "homepage": "https://github.com/thyrgle/radianskelvin#readme"
+  "homepage": "https://github.com/thyrgle/radianskelvin#readme",
+  "devDependencies": {
+    "browserify": "^11.0.1",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "reactify": "^1.1.1",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.3.1"
+  }
 }
