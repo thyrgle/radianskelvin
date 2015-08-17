@@ -3,7 +3,6 @@ var source = require('vinyl-source-stream');
 var browserify = require('browserify');
 var watchify = require('watchify');
 var reactify = require('reactify');
-var concat = require('concat');
 
 gulp.task('browserify', function() {
     var bundler = browserify({
