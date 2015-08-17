@@ -15,6 +15,10 @@ var glob = require('glob');
 var livereload = require('gulp-livereload');
 var jasminePhantomJs = require('gulp-jasmine2-phantomjs');
 
+var dependencies = [
+    'react'
+];
+
 gulp.task('browserify', function() {
     var bundler = browserify({
         entries: ['./app/main.js'],
