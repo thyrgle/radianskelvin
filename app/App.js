@@ -17,6 +17,7 @@ var App = React.createClass({
             <div>
               <h1>Radians Kelvin</h1>
               <p>Today it is:</p>
+              <DisplayWeather />
             </div>
         );
     }	
