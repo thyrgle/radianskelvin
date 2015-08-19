@@ -2,10 +2,17 @@
 var React = require('react');
 
 var DisplayWeather = React.createClass({
+    getWeather: function() {
+        var temp = 0.0;
+        //Weather.getCurrent("Berkeley", function(current) {
+        //    temp = current.temperature();
+        //});
+        return temp;
+    },
     render: function() {
         return (
             <div>
-              <p>Testing</p>
+              <p>{this.getWeather()}</p>
             </div>
         );
     }
