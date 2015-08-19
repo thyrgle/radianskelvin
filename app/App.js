@@ -1,6 +1,16 @@
 /** @jsx React.DOM */
 var React = require('react');
 
+var DisplayWeather = React.createClass({
+    render: function() {
+        return (
+            <div>
+              <p>Testing</p>
+            </div>
+        );
+    }
+});
+
 var App = React.createClass({
     render: function() {
         return (
