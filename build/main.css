@@ -1,6 +1,14 @@
-h1 {
+* {
     font-family: 'Lato', serif;
     text-align: center;
+}
+
+h1 {
+    font-size: 72px;
+}
+
+p {
+    font-size: 48px;
 }
 
 body {
