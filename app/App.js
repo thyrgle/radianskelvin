@@ -16,6 +16,9 @@ var DisplayTemp = React.createClass({
     }
 });
 
+var DisplayClimate = React.createClass({
+});
+
 var App = React.createClass({
     getInitialState: function() {
         return {data: {main:{temp: 0.0}}};
