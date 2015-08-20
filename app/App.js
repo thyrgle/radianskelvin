@@ -9,8 +9,7 @@ var DisplayWeather = React.createClass({
     render: function() {
         return (
             <div>
-              <p>{this.toRadians(this.props.data.main.temp).toFixed(2)}&pi;</p>
-              <p>rads Kelvin</p>
+              <p>{this.toRadians(this.props.data.main.temp).toFixed(2)}&pi;&nbsp; <span id="unit">rads Kelvin</span></p>
             </div>
         );
     }
