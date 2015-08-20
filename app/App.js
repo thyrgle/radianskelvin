@@ -18,6 +18,13 @@ var DisplayTemp = React.createClass({
 
 var DisplayClimate = React.createClass({
     render: function() {
+        return (
+                <div>
+                  <svg width="500" height="350">
+                    <circle id="sun" r="30" cx="50" cy="50" fill="yellow" />
+                  </svg>
+                </div>
+               );
     }
 });
 
@@ -44,6 +51,7 @@ var App = React.createClass({
               <h1>Radians Kelvin</h1>
               <p>Today it is:</p>
               <DisplayTemp data={this.state.data} />
+              <DisplayClimate />
             </div>
         );
     }	
