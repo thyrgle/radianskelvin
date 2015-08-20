@@ -3,10 +3,14 @@ var React = require('react');
 var $ = require('jQuery');
 
 var DisplayWeather = React.createClass({
+    toRadians: function(num) {
+        return num / 180;
+    },
     render: function() {
         return (
             <div>
-              <p>{this.props.data.main.temp}</p>
+              <p>{this.toRadians(this.props.data.main.temp).toFixed(2)}&pi;</p>
+              <p>rads Kelvin</p>
             </div>
         );
     }
