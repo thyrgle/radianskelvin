@@ -17,6 +17,8 @@ var DisplayTemp = React.createClass({
 });
 
 var DisplayClimate = React.createClass({
+    render: function() {
+    }
 });
 
 var App = React.createClass({
