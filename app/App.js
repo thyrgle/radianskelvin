@@ -1,27 +1,40 @@
 /** @jsx React.DOM */
 var React = require('react');
+var $ = require('jQuery');
 
 var DisplayWeather = React.createClass({
-    getWeather: function() {
-        var temp = 0.0;
-        return temp;
-    },
     render: function() {
         return (
             <div>
-              <p>{this.getWeather()}</p>
+              <p>{this.props.data.main.temp}</p>
             </div>
         );
     }
 });
 
 var App = React.createClass({
+    getInitialState: function() {
+        return {data: {main:{temp: 0.0}}};
+    },
+    componentDidMount: function() {
+        var url = 'http://api.openweathermap.org/data/2.5/weather';
+        $.ajax({
+            dataType: "jsonp",
+            url: url,
+            jsonCallback: 'jsonp',
+            data: { q: "San Diego"},
+            cache: false,
+            success: function (data) {
+                this.setState({data: data});
+            }.bind(this)
+        });
+    },
     render: function() {
         return (
             <div>
               <h1>Radians Kelvin</h1>
               <p>Today it is:</p>
-              <DisplayWeather />
+              <DisplayWeather data={this.state.data} />
             </div>
         );
     }	
