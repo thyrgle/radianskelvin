@@ -2,7 +2,7 @@
 var React = require('react');
 var $ = require('jQuery');
 
-var DisplayWeather = React.createClass({
+var DisplayTemp = React.createClass({
     toRadians: function(num) {
         return num / 180;
     },
@@ -38,7 +38,7 @@ var App = React.createClass({
             <div>
               <h1>Radians Kelvin</h1>
               <p>Today it is:</p>
-              <DisplayWeather data={this.state.data} />
+              <DisplayTemp data={this.state.data} />
             </div>
         );
     }	
