@@ -9,6 +9,7 @@ var DisplayTemp = React.createClass({
     render: function() {
         return (
             <div>
+              <p>Today it is:</p>
               <p><span id="temp">{this.toRadians(this.props.data.main.temp).toFixed(2)}&pi;</span>
               <span id="unit">rads Kelvin</span></p>
             </div>
@@ -20,7 +21,7 @@ var DisplayClimate = React.createClass({
     render: function() {
         return (
                 <div>
-                  <svg width="500" height="350">
+                  <svg width="300" height="350">
                     <circle id="sun" r="30" cx="50" cy="50" fill="yellow" />
                   </svg>
                 </div>
@@ -49,9 +50,10 @@ var App = React.createClass({
         return (
             <div>
               <h1>Radians Kelvin</h1>
-              <p>Today it is:</p>
-              <DisplayTemp data={this.state.data} />
-              <DisplayClimate />
+              <div class="container">
+                <DisplayClimate />
+                <DisplayTemp data={this.state.data} />
+              </div>
             </div>
         );
     }	
