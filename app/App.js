@@ -32,8 +32,8 @@ var DisplayClimate = React.createClass({
                 <div style={left}>
                   <svg width="300" height="350">
                     <circle id="sun" r="50" cx="150" cy="125" fill="yellow" />
-                    <rect x="150" y="125" width="100" height="100" fill="orange"/>
-                  <svg>
+                    <polygon points="150,50 100,150 200,150" fill="red" />
+                  </svg>
                 </div>
                );
     }
