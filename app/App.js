@@ -39,6 +39,12 @@ var DisplayClimate = React.createClass({
     }
 });
 
+var City = React.createClass({
+    render: function() {
+        return <div></div>;
+    }
+});
+
 var App = React.createClass({
     getInitialState: function() {
         return {data: {main:{temp: 0.0}}};
@@ -63,6 +69,9 @@ var App = React.createClass({
               <div>
                 <DisplayClimate />
                 <DisplayTemp data={this.state.data} />
+              </div>
+              <div>
+                <City />
               </div>
             </div>
         );
