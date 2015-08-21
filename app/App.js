@@ -8,8 +8,9 @@ var DisplayTemp = React.createClass({
     },
     render: function() {
         var right = {
-            float: 'left',
-            display: 'inline'
+            display: 'inline-block',
+            height: '350px',
+            verticalAlign: 'top'
         }
         return (
             <div style={right}>
@@ -24,13 +25,15 @@ var DisplayTemp = React.createClass({
 var DisplayClimate = React.createClass({
     render: function() {
         var left = {
-            float: 'left',
-            display: 'inline'
+            display: 'inline-block',
+            height: '350px'
         }
         return (
-                <svg style={left} width="300" height="350">
-                  <circle id="sun" r="30" cx="50" cy="50" fill="yellow" />
-                </svg>
+                <div style={left}>
+                  <svg style={left} width="300" height="350">
+                    <circle id="sun" r="50" cx="150" cy="125" fill="yellow" />
+                  </svg>
+                </div>
                );
     }
 });
@@ -56,8 +59,10 @@ var App = React.createClass({
         return (
             <div>
               <h1>Radians Kelvin</h1>
-              <DisplayClimate />
-              <DisplayTemp data={this.state.data} />
+              <div>
+                <DisplayClimate />
+                <DisplayTemp data={this.state.data} />
+              </div>
             </div>
         );
     }	
