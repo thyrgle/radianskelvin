@@ -41,7 +41,11 @@ var DisplayClimate = React.createClass({
 
 var City = React.createClass({
     render: function() {
-        return <div></div>;
+        return ( 
+                <div>
+                  <input type="text" />
+                </div>
+               );
     }
 });
 
