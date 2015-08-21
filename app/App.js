@@ -7,8 +7,12 @@ var DisplayTemp = React.createClass({
         return num / 180;
     },
     render: function() {
+        var right = {
+            float: 'left',
+            display: 'inline'
+        }
         return (
-            <div>
+            <div style={right}>
               <p>Today it is:</p>
               <p><span id="temp">{this.toRadians(this.props.data.main.temp).toFixed(2)}&pi;</span>
               <span id="unit">rads Kelvin</span></p>
@@ -19,12 +23,14 @@ var DisplayTemp = React.createClass({
 
 var DisplayClimate = React.createClass({
     render: function() {
+        var left = {
+            float: 'left',
+            display: 'inline'
+        }
         return (
-                <div>
-                  <svg width="300" height="350">
-                    <circle id="sun" r="30" cx="50" cy="50" fill="yellow" />
-                  </svg>
-                </div>
+                <svg style={left} width="300" height="350">
+                  <circle id="sun" r="30" cx="50" cy="50" fill="yellow" />
+                </svg>
                );
     }
 });
@@ -50,10 +56,8 @@ var App = React.createClass({
         return (
             <div>
               <h1>Radians Kelvin</h1>
-              <div class="container">
-                <DisplayClimate />
-                <DisplayTemp data={this.state.data} />
-              </div>
+              <DisplayClimate />
+              <DisplayTemp data={this.state.data} />
             </div>
         );
     }	
